@@ -83,12 +83,7 @@ module.exports = function (defaults) {
 
     "ember-cli-terser": {
       enabled: isProduction,
-      exclude: [
-        "**/test-*.js",
-        "**/core-tests*.js",
-        "**/highlightjs/*",
-        "**/javascripts/*",
-      ],
+      exclude: ["**/highlightjs/*", "**/javascripts/*"],
     },
 
     "ember-cli-babel": {
@@ -98,9 +93,6 @@ module.exports = function (defaults) {
     babel: {
       plugins: [require.resolve("deprecation-silencer")],
     },
-
-    // We need to build tests in prod for theme tests
-    tests: true,
 
     vendorFiles: {
       // Freedom patch - includes bug fix and async stack support
